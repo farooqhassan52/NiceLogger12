@@ -80,8 +80,8 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  # spec.source       = { :git => "https://github.com/farooqhassan52/NiceLogger12.git", :tag => "#{spec.version}" }
-	spec.source       = { :http => 'file:' + __dir__ + "/" }
+  spec.source       = { :git => "https://github.com/farooqhassan52/NiceLogger12.git", :tag => "#{spec.version}" }
+	# spec.source       = { :http => 'file:' + __dir__ + "/" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
