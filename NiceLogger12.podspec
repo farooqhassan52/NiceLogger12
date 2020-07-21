@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "NiceLogger12/*.{h}"
-  spec.exclude_files = "Classes/Exclude"
-   spec.swift_version = "5.0"
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.source_files  = "NiceLogger12/*.{h,swift}"
+  spec.exclude_files = "NiceLogger12/Exclude"
+  spec.swift_version = "5.0"
+  spec.public_header_files = "NiceLogger12/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
