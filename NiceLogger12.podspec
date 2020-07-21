@@ -94,7 +94,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = "NiceLogger12/*.{h,swift}"
   spec.exclude_files = "NiceLogger12/Exclude"
   spec.swift_version = "5.0"
-  # spec.public_header_files = "NiceLogger12/**/*.h"
+  spec.public_header_files = "NiceLogger12/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
