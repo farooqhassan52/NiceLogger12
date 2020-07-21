@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum LoggerLevel: Int {
+enum LoggerLevel: Int {
     case info = 1
     case debug
     case warning
@@ -26,12 +26,12 @@ public enum LoggerLevel: Int {
     }
 }
 
-public enum LoggerOutput: String {
+enum LoggerOutput: String {
     case debuggerConsole
     case deviceConsole
 }
 
-public class NiceLogger: NSObject {
+class NiceLogger: NSObject {
     public static var tag: String?
     public static var level: LoggerLevel = .info
     public static var ouput: LoggerOutput = .debuggerConsole
@@ -54,22 +54,22 @@ public class NiceLogger: NSObject {
         }
     }
     
-    public class func i(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
+     class func i(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
         log(.info, message: message, currentTime: currentTime, fileName: fileName, functionName: functionName, lineNumber: lineNumber, thread: thread)
     }
-    public class func d(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
+     class func d(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
         log(.debug, message: message, currentTime: currentTime, fileName: fileName, functionName: functionName, lineNumber: lineNumber, thread: thread)
     }
-    public class func w(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
+     class func w(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
         log(.warning, message: message, currentTime: currentTime, fileName: fileName, functionName: functionName, lineNumber: lineNumber, thread: thread)
     }
-    public class func e(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
+     class func e(_ message: String, currentTime: Date = Date(), fileName: String = #file, functionName: String = #function, lineNumber: Int = #line, thread: Thread = Thread.current ) {
         log(.error, message: message, currentTime: currentTime, fileName: fileName, functionName: functionName, lineNumber: lineNumber, thread: thread)
     }
 }
 
 
-public extension Date {
+extension Date {
     var millisecondsSince1970:Int {
         return Int((self.timeIntervalSince1970 * 1000.0).rounded())
     }
@@ -98,7 +98,7 @@ public extension Date {
     }
 }
 
-public extension Formatter {
+ extension Formatter {
     static let iso8601: DateFormatter = {
         let formatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .iso8601)
@@ -109,7 +109,7 @@ public extension Formatter {
     }()
 }
 
-public extension String {
+ extension String {
     var dateFromISO8601: Date? {
         return Formatter.iso8601.date(from: self)   // "Mar 22, 2017, 10:22 AM"
     }

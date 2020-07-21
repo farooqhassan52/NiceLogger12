@@ -72,7 +72,7 @@ Pod::Spec.new do |spec|
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
-	spec.ios.vendored_frameworks = 'NiceLogger12.framework'
+	
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,8 +90,8 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  # spec.source_files  = "NiceLogger12/*.{h,swift}"
+# spec.ios.vendored_frameworks = 'NiceLogger12.framework'
+  spec.source_files  = "NiceLogger12/*.{h,swift}"
   spec.exclude_files = "Classes/Exclude"
   spec.swift_version = "5.0"
   # spec.public_header_files = "NiceLogger12/**/*.h"
