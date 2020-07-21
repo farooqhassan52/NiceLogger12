@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "10.0"
+  # spec.platform     = :ios, "10.0"
 
   #  When using multiple platforms
   spec.ios.deployment_target = "10.0"
@@ -92,9 +92,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files  = "NiceLogger12/*.{h,swift}"
-  spec.exclude_files = "NiceLogger12/Exclude"
+  spec.exclude_files = "Classes/Exclude"
   spec.swift_version = "5.0"
-  spec.public_header_files = "NiceLogger12/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
