@@ -32,7 +32,7 @@ public enum LoggerOutput: String {
     case deviceConsole
 }
 
-public class NiceLogger: NSObject {
+public class NiceLogger12: NSObject {
     public static var tag: String?
     public static var level: LoggerLevel = .info
     public static var ouput: LoggerOutput = .debuggerConsole
