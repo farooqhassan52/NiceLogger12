@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
-  #
+  spec.ios.vendored_frameworks = 'NiceLogger12.framework'
 
   spec.source       = { :git => "https://github.com/farooqhassan52/NiceLogger12.git", :tag => "#{spec.version}" }
 	# spec.source       = { :http => 'file:' + __dir__ + "/" }
@@ -90,8 +90,8 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-# spec.ios.vendored_frameworks = 'NiceLogger12.framework'
-  spec.source_files  = "NiceLogger12/*.{h,swift}"
+
+  # spec.source_files  = "NiceLogger12/*.{h,swift}"
   spec.exclude_files = "NiceLogger12/Exclude"
   spec.swift_version = "5.0"
   spec.public_header_files = "NiceLogger12/*.h"

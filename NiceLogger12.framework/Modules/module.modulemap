@@ -1,0 +1,11 @@
+framework module NiceLogger12 {
+  umbrella header "NiceLogger12.h"
+
+  export *
+  module * { export * }
+}
+
+module NiceLogger12.Swift {
+    header "NiceLogger12-Swift.h"
+    requires objc
+}
