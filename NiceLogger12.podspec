@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "NiceLogger12"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A small framework to NiceLogger changes in Swift."
 
   # This description is used to generate tags and improve search results.
@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "NiceLogger12/*.{h,swift}"
   spec.exclude_files = "Classes/Exclude"
-    # spec.swift_version = "5.0"
+   spec.swift_version = "5.0"
   # spec.public_header_files = "Classes/**/*.h"
 
 
